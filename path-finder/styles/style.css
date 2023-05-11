@@ -398,13 +398,13 @@ svg{
   height:28px;
   border-width: 3px;
   border-style: solid;
-  border-color:#1e2431;
+  border-color:#000000;
 }
 
 #unvisited-node{
   width:28px;
   height:28px;
-  border:3px solid rgba(0,190,218,0.75);
+  border:3px solid rgba(0, 0, 0, 0.75);
 }
 
 #current-node{
