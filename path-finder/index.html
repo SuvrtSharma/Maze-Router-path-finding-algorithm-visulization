@@ -89,7 +89,7 @@
               role="tab"
               aria-controls="ex3-tabs-3"
               aria-selected="false"
-              >Topological Sorting</a
+              >Project Report</a
             >
           </li>
         </ul>
@@ -108,7 +108,7 @@
                 <!-- Container wrapper -->
                 <div class="container-fluid">
                   <!-- Navbar brand -->
-                  <a class="navbar-brand" >Path-Finding Algorithms</a>
+                  <a class="navbar-brand" >Maze Sage</a>
                   <!-- Toggle button -->
                   <button
                     class="navbar-toggler"
@@ -148,13 +148,10 @@
                           <li><a class="dropdown-item" id="dfs">DFS</a></li>
                           <li><a class="dropdown-item" id="bfs">BFS</a></li>
                           <li><a class="dropdown-item" id="dijkstra">Dijkstra (UCS)</a></li>
-                          <li><a class="dropdown-item" id="bidirectional-bfs">Bidirectional BFS</a></li>
-                          <li><a class="dropdown-item" id="bidirectional-dijkstra">Bidirectional Dijkstra (UCS)</a></li>
-                          <!-- <li><hr class="dropdown-divider" /></li> -->
                           <li><a class="dropdown-item" id="astar">A* (Manhattan Distance)</a></li>
-                          <li><a class="dropdown-item" id="greedybest">Greedy Best-first (Manhattan Distance)</a></li>
-                          <li><a class="dropdown-item" id="bidirectional-astar">Bidirectional A*</a></li>
-                          <li><a class="dropdown-item" id="bidirectional-greedy-bfs">Bidirectional Greedy Best-first</a></li>
+                      
+                          <!-- <li><hr class="dropdown-divider" /></li> -->
+                  
                         </ul>
                       </div>
                       <div class="btn-group shadow-0">
@@ -203,9 +200,7 @@
                         <input name="grid-size" type="range" class="form-range" id="size-slider" value="28" min="19" max="90"  />
                       </li>
                   </div>
-                  <!-- Collapsible wrapper -->
                 </div>
-                <!-- Container wrapper -->
                 </nav>
               </header>
               <main>
@@ -299,7 +294,7 @@
               <!-- Container wrapper -->
               <div class="container-fluid">
                 <!-- Navbar brand -->
-                <a class="navbar-brand" >Minimum Spanning Tree</a>
+                <a class="navbar-brand" >to be</a>
                 <!-- Toggle button -->
                 <button
                   class="navbar-toggler"
@@ -406,203 +401,16 @@
               <!-- Container wrapper -->
               <div class="container-fluid">
                 <!-- Navbar brand -->
-                <a class="navbar-brand" >Topological Sort</a>
+                <a class="navbar-brand" >Project Report</a>
                 <!-- Toggle button -->
               </div>
               <!-- Container wrapper -->
               </nav>
             </header>
-            <main>
-              <section id="network-helper">
-                <div>
-                  <div id="topological-helper">
-                  <p class="lead">Task Scheduling can be done via <em>Topological Sorting</em>.</p>
-                  <p class="text-muted">Topological Sorting is applicable only on <abbr title="Directed Acyclic Graphs">DAGs</abbr>.</p>
-                  <p class="text-muted"><em>Topological Sorting</em> by <b><u>Kahn's Algorithm</u></b> using List of tasks below</p>
-                    </div>
-                  <div class="accordion" id="topological-sort-definition">
-                    <div id="headingOne">
-                      <h2>
-                        <button
-                          class="btn btn-link btn-block text-left pl-3"
-                          type="button"
-                          data-toggle="collapse"
-                          data-target="#collapseOne"
-                          aria-expanded="true"
-                          aria-controls="collapseOne"
-                        >
-                        Topological Sorting
-                        </button>
-                      </h2>
-                    </div>
+           <main>
+<!--add report here-->
 
-                    <div
-                      id="collapseOne"
-                      class="collapse pl-3"
-                      aria-labelledby="headingOne"
-                      data-parent="#topological-sort-definition"
-                    >
-                  <blockquote class="blockquote" cite="https://en.wikipedia.org/wiki/Topological_sorting#:~:text=In%20computer%20science%2C%20a%20topological,before%20v%20in%20the%20ordering.">
-                      <p>In computer science, a topological sort or topological ordering of a directed graph is
-                         a linear ordering of its vertices such that for every directed edge uv from vertex u to vertex v, u
-                        comes before v in the ordering.
-                        For instance, the vertices of the graph may represent tasks to be performed,
-                         and the edges may represent constraints that one task must be performed before
-                         another; in this application, a topological ordering is just a valid sequence
-                         for the tasks. A topological ordering is possible if and only if the graph has
-                         no directed cycles, that is, if it is a directed acyclic graph (DAG)
-                       </p>
-                  </blockquote>
-                    </div>
-
-                  </div>
-                </div>
-              </section>
-              <section id="network-container">
-                  <form name="tasks">
-                    <div id="tasks-input">
-                      <div id="task-1-input" class="row g-3 align-items-center mt-1 ml-2">
-                        <div class="form-outline col-auto mb-2 mr-2">
-                          <input
-                            type="text"
-                            name="task-1"
-                            class="form-control"
-                            placeholder="Buy Groceries"
-                            aria-describedby="task-1"
-                            required
-                          />
-                          <label class="form-label" for="task-1">Task #1</label>
-                        </div>
-                        <div class="form-outline col-auto">
-                          <input
-                            type="text"
-                            name="preq-1"
-                            class="form-control"
-                            placeholder="Dress"
-                            aria-describedby="preq-1"
-                            required
-                          />
-                          <label class="form-label" for="preq-1">Task #1 Prerequisites</label>
-                        </div>
-                      <div class="col-auto">
-                        <span id="textExample2" class="form-text mb-3">
-                          Prerequisites Must be comma separated Values
-                        </span>
-                      </div>
-                    </div>
-                      <div id="task-2-input" hidden class="row g-3 align-items-center ml-2">
-                        <div class="form-outline col-auto mb-2 mr-2">
-                          <input
-                            type="text"
-                            name="task-2"
-                            class="form-control"
-                            placeholder="Dress"
-                            aria-describedby="task-1"
-                            required
-                          />
-                          <label class="form-label" for="task-2">Task #2</label>
-                        </div>
-                        <div class="form-outline mb-2 col-auto">
-                          <input
-                            type="text"
-                            name="preq-2"
-                            class="form-control"
-                            placeholder="Wakeup"
-                            aria-describedby="preq-1"
-                            required
-                          />
-                          <label class="form-label" for="preq-2">Task #2 Prerequisites</label>
-                        </div>
-                    </div>
-                      <div id="task-3-input" hidden class="row g-3 align-items-center ml-2">
-                        <div class="form-outline col-auto mb-2 mr-2">
-                          <input
-                            type="text"
-                            name="task-3"
-                            placeholder="Wakeup"
-                            class="form-control"
-                            aria-describedby="task-1"
-                            required
-                          />
-                          <label class="form-label" for="task-1">Task #3</label>
-                        </div>
-                        <div class="form-outline mb-2 col-auto">
-                          <input
-                            type="text"
-                            name="preq-3"
-                            placeholder="Sleep"
-                            class="form-control"
-                            aria-describedby="preq-1"
-                            required
-                          />
-                          <label class="form-label" for="preq-3">Task #3 Prerequisites</label>
-                        </div>
-                    </div>
-                      <div id="task-4-input" hidden class="row g-3 align-items-center ml-2">
-                        <div class="form-outline col-auto mb-2 mr-2">
-                          <input
-                            type="text"
-                            name="task-4"
-                            placeholder="You're still here?"
-                            class="form-control"
-                            aria-describedby="task-1"
-                            required
-                          />
-                          <label class="form-label" for="task-4">Task #4</label>
-                        </div>
-                        <div class="form-outline mb-2 col-auto border">
-                          <input
-                            type="text"
-                            name="preq-4"
-                            class="form-control"
-                            placeholder="I'm out of ideas"
-                            aria-describedby="preq-1"
-                            required
-                          />
-                          <label class="form-label" for="preq-1">Task #4 Prerequisites</label>
-                        </div>
-                    </div>
-                      <div id="task-5-input" hidden class="row g-3 align-items-center ml-2">
-                        <div class="form-outline col-auto mb-2 mr-2">
-                          <input
-                            type="text"
-                            name="task-5"
-                            class="form-control"
-                            placeholder="Let's finish it with a cycle"
-                            aria-describedby="task-1"
-                            required
-                          />
-                          <label class="form-label" for="task-1">Task #5</label>
-                        </div>
-                        <div class="form-outline mb-2 col-auto">
-                          <input
-                            type="text"
-                            name="preq-5"
-                            class="form-control"
-                            placeholder="Let's finish it with a cycle"
-                            aria-describedby="preq-1"
-                            required
-                          />
-                          <label class="form-label" for="preq-1">Task #5 Prerequisites</label>
-                        </div>
-                    </div>
-                    </div>
-                     <!-- Submit button -->
-                     <div id="tasks-submit" class="mb-2">
-                      <button id="task-adder" class="btn btn-danger ml-2 mt-2">
-                        Add more
-                      </button>
-                      <button id="network-visualizer" class="btn btn-danger mt-2">
-                        Visualize
-                      </button>
-                    </div>
-                </form>
-                <div id="result"></div>
-                <div id="mynetwork"></div>
-              </section>
-            </main>
-          </div>
-        </div>
+           </main>
         <!-- Tabs content -->
         <div id="shortcut-toast" class="toast bg-info text-white" role="alert" aria-live="assertive"
   aria-atomic="true" data-autohide="false" data-content="11000">
@@ -677,14 +485,9 @@
         <div class="text-center p-3 bg-dark">
     <a class="text-light">DAA project</a>
     <div>
-      <a class="btn btn-primary btn-floating" style="background-color: #0082ca;" href="" target="_blank" role="button"
-    ><i class="fab fa-linkedin-in"></i
-  ></a>
-  <a class="btn btn-primary btn-floating" style="background-color: #333333;" href="" target="_blank" role="button"
+    
+  <a class="btn btn-primary btn-floating" style="background-color: #333333;" href="https://github.com/SuvrtSharma/Maze-Router-path-finding-algorithm-visulization.git" target="_blank" role="button"
   ><i class="fab fa-github"></i
-></a>
-<a class="btn btn-primary btn-floating" style="background-color: #3b5998;" href="" target="_blank" role="button"
-  ><i class="fab fa-facebook-f"></i
 ></a>
 </div>
   </div>
